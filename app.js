@@ -21,8 +21,8 @@ function fetchWeather(citi_name = "Dubai"){
         citiName.innerHTML = `${name} <span>${sys.country}</span>`;
         tempH1.innerHTML = `${Math.round(main.temp-273.15)} <span>°c</span>`
         p1.innerHTML.translation = `${weather[0].main} `
-        p2.innerHTML = `<p>Ветер ${wind.speed} </p>`
-        p3.innerHTML = `<p>Влажность ${main.humidity} </p>`
+        p2.innerHTML = `<p>Ветер ${wind.speed}<span> км/ч</span> </p>`
+        p3.innerHTML = `<p>Влажность ${main.humidity}<span> %</span> </p>`
         img.src = setImg(weather[0].main)
     })
     .catch()
